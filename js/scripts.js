@@ -1,3 +1,9 @@
+//user logic
+$(function(){
+  alert("this is working")
+
+})
+
 //business logic
 function Customer(name, phone, notes) {
   this.name = name;
