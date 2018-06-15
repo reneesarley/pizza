@@ -61,7 +61,7 @@
               </div>
             </div>
           </form>
-          <h4>Pizza 1</h4>
+          <h4 class="pizzaName">Pizza 1</h4>
           <form class="form-control-sm" id="pizzaOrder">
             <div class="row" id="sizeCheese">
               <div class="form-group col-sm-6">
@@ -144,12 +144,13 @@
                 </div>
               </div>
             </div>
+            <button class="btn btn-secondary" type="button" name="addPizza">Add this pizza to order</button>
           </form>
         </div>
         <div class="col-sm-3" id="orderSummary">
           <h4>Order Summary</h4>
           <p>Customer<br> <span class="orderSummaryInput" id="orderName"> </span></p>
-          <p>Delivery address<br> <span class="orderSummaryInput" id="orderAddress"> </span></p>
+          <p>Delivery address<br> <span class="orderSummaryInput" id="orderAddress"></span> <br> <span class="orderSummaryInput" id="orderCityStateZip"></span> </p>
           <p>Contact number<br> <span class="orderSummaryInput" id="orderNumber"> </span></p>
           <p>Delivery notes<br> <span class="orderSummaryInput" id="orderNotes"> </span></p>
           <h4>Order</h4>

@@ -2,12 +2,12 @@ body{
   background-color: lightgrey;
 }
 
+
 .container{
   padding-right: 0;
   margin-right: 0;
 }
 .row{
- margin-bottom: -5px;
 }
 
 label{
@@ -22,6 +22,11 @@ input{
   background-color: white;
   color: black;
   font-size: .9em;
+}
+
+.pizzaName{
+  margin-top: 30px;
+  border-top: 2px solid black;
 }
 
 .orderSummaryInput{

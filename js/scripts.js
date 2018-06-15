@@ -11,20 +11,20 @@ $(function(){
     var notes = $("#deliveryNotes").val()
     var newCustomer = new Customer(name, number, notes)
     var newAddress = new Address(type, street, city, state, zip)
-    newCustomer.addresses.push([newAddress]);
-    console.log("newContact: "+ newCustomer)
-    console.log("addresses:" + newCustomer.addresses);
-    console.log(newCustomer.addresses[0].street);
+    newCustomer.addresses.push(newAddress);
+    // console.log("newContact: "+ newCustomer)
+    // console.log("addresses:" + newCustomer.addresses);
+    // console.log(newCustomer.addresses[0].street);
     addCustomerInfoToSummary(newCustomer)
   })
 
   function addCustomerInfoToSummary(customer){
-    var addressStreet = customer.addresses[0].street
+    var cityStateZip = customer.addresses[0].city + ", " + customer.addresses[0].state + " " + customer.addresses[0].zip
     $("#orderName").text(customer.name);
-    $("#orderNumber").text(customer.number);
-    $("#orderAddress").text("test address");
-    $("#orderNotes").text("test notes");
-    // $("#orderAddress").text(customer.addresses[0]);
+    $("#orderNumber").text(customer.phone);
+    $("#orderAddress").text(customer.addresses[0].street);
+    $("#orderCityStateZip").text(cityStateZip);
+    $("#orderNotes").text(customer.deliveryNotes);
   }
 
 });
