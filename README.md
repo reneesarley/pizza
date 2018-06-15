@@ -11,7 +11,7 @@ _This application will take input from the customer and create their pizza order
 ## Setup/Installation Requirements
 
 * _Clone from GitHub here: https://github.com/reneesarley/pizza_
-* _View in gh pages here:_
+* _View in gh pages here: https://reneesarley.github.io/pizza/_
 
 ## Specifications
 
@@ -31,7 +31,7 @@ _This application will take input from the customer and create their pizza order
 | Charge customer 50 cents per topping for small pizzas | mushrooms, olives, basil  | $1.50  |
 | Charge customer 75 cents per topping for medium pizzas | mushrooms, olives, basil  | $2.25  |
 | Charge customer $1 per topping for large pizzas | mushrooms, olives, basil  | $3  |
-| Calculate pizza cost based on size and number of toppings | small 3 topping  | $13.50 | 
+| Calculate pizza cost based on size and number of toppings | small 3 topping  | $13.50 |
 
 ## Known Bugs
 
