@@ -10,55 +10,68 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pizza Order Form</h1>
-      <form class="" action="index.html" method="post">
-        <div class="row">
-          <div class="form-group col-sm-8">
-           <label for="customerName">Your name:</label>
-           <input type="text" class="form-control" id="customerName" placeholder="your name here">
-          </div>
-          <div class="form-group col-sm-4">
-           <label for="customerNumber">Your number:</label>
-           <input type="text" class="form-control" id="customerNumber" placeholder="your number here">
-          </div>
-        </div>
-        <div class="form-group">
-         <label for="street">Street:</label>
-         <input type="text" class="form-control" id="street" placeholder="1234 Anystreet Drive">
-        </div>
-        <div class="row" id="cityStateZip">
-          <div class="form-group col-sm-5">
-           <label for="city">City:</label>
-           <input type="text" class="form-control" id="city" placeholder="Portland">
-          </div>
-          <div class="form-group col-sm-2">
-            <label for="customerName">State</label>
-            <input type="text" class="form-control" id="state" placeholder="OR">
-          </div>
-          <div class="form-group col-sm-5">
-           <label for="customerName">Zip:</label>
-           <input type="text" class="form-control" id="zip" placeholder="90124">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="form-group">
-             <label for="addressType">Address Type:</label>
-             <select class="form-control" id="addressType">
-               <option>Home</option>
-               <option>Office</option>
-               <option>School</option>
-               <option>Other</option>
-             </select>
+      <div class="row">
+        <div class="col-sm-9" id="orderSection">
+          <h1>Pizza Order Form</h1>
+          <form class="form-control-sm" id="addressForm" method="post">
+            <div class="row">
+              <div class="form-group col-sm-8">
+               <label for="customerName">Your name:</label>
+               <input type="text" class="form-control" id="customerName">
+              </div>
+              <div class="form-group col-sm-4">
+               <label for="customerNumber">Your number:</label>
+               <input type="text" class="form-control" id="customerNumber">
+              </div>
             </div>
-            <button type="button" class="btn btn-secondary" id="addAddress" name="address">Save Address to Order</button>
-          </div>
-          <div class="form-group col-sm-9">
-           <label for="deliveryNotes">Any special instuctions for delivery?</label>
-           <textarea class="form-control" id="deliveryNotes" placeholder="ie. call when you get here" rows="3"></textarea>
-          </div>
-          </div>
-      </form>
+            <div class="form-group">
+             <label for="street">Street:</label>
+             <input type="text" class="form-control" id="street">
+            </div>
+            <div class="row" id="cityStateZip">
+              <div class="form-group col-sm-5">
+               <label for="city">City:</label>
+               <input type="text" class="form-control" id="city">
+              </div>
+              <div class="form-group col-sm-2">
+                <label for="customerName">State</label>
+                <input type="text" class="form-control" id="state">
+              </div>
+              <div class="form-group col-sm-5">
+               <label for="customerName">Zip:</label>
+               <input type="text" class="form-control" id="zip">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                 <label for="addressType">Address Type:</label>
+                 <select class="form-control" id="addressType">
+                   <option>Home</option>
+                   <option>Office</option>
+                   <option>School</option>
+                   <option>Other</option>
+                 </select>
+                </div>
+                <button type="button" class="btn btn-secondary" id="addAddress" name="address">Save Address to Order</button>
+              </div>
+              <div class="form-group col-sm-9">
+               <label for="deliveryNotes">Any special instuctions for delivery?</label>
+               <textarea class="form-control" id="deliveryNotes" rows="3"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-3" id="orderSummary">
+          <h4>Order Summary</h4>
+          <p>Customer<br> <span class="orderSummaryInput" id="orderName"> </span></p>
+          <p>Delivery address<br> <span class="orderSummaryInput" id="orderAddress"> </span></p>
+          <p>Contact number<br> <span class="orderSummaryInput" id="orderNumber"> </span></p>
+          <p>Delivery notes<br> <span class="orderSummaryInput" id="orderNotes"> </span></p>
+          <h4>Order</h4>
+          <p>Pizza 1<br> <span class="orderSummaryInput" id="orderPizza1"> </span></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

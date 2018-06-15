@@ -9,12 +9,20 @@ $(function(){
     var zip = $("#zip").val()
     var type = $("#addressType").val()
     var notes = $("#deliveryNotes").val()
-    console.log(name + number + notes)
     var newCustomer = new Customer(name, number, notes)
     var newAddress = new Address(type, street, city, state, zip)
-    newCustomer.addresses.push(newAddress);
-    console.log(newCustomer)
+    newCustomer.addresses.push([newAddress]);
+    console.log(newCustomer.addresses[0].street);
+    addCustomerInfoToSummary(newCustomer)
   })
+
+  function addCustomerInfoToSummary(customer){
+    var addressStreet = customer.addresses[0].street
+    $("#orderName").text(customer.name);
+    $("#orderAddress").text(addressStreet);
+    // $("#orderAddress").text(customer.addresses[0]);
+  }
+
 });
 
 //business logic
