@@ -1,6 +1,5 @@
 //user logic
 $(function(){
-  alert("this is working")
 
 })
 
@@ -13,7 +12,6 @@ function Customer(name, phone, notes) {
 }
 
 Address.prototype.addAddress = function(newAddress){
-  alert("the customer's street is"+ newAddress.street)
   newCustomer.addresses.push(newAddress);
 }
 
