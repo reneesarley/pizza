@@ -15,6 +15,10 @@ _This application will take input from the customer and create their pizza order
 
 ## Specifications
 
+* _This application will allow the user to choose toppings and size for the pizza they'd like to order._
+* _This will include a pizza object constructor with properties for toppings and size._
+* _This will include a prototype method for the cost of a pizza depending on the selections chosen._
+
 |Behavior  |     Input     | Output|
 |:----------:|:-------------:|:------:|
 | Customer selects a topping and the topping is added to the order for that pizza | mushroom | toppings: ["mushroom"]|
