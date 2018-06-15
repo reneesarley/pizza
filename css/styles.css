@@ -33,6 +33,7 @@ input{
   display: none;
 }
 
-.orderSummaryInput{
-  line-height: 1em;
+.pizzaSummaryInput{
+  line-height: .5em;
+  font-weight: bold;
 }

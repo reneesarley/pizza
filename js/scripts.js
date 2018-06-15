@@ -1,7 +1,8 @@
 //user logic
 $(function(){
-  $("#addAddress").click(function(){
+  $("#addPizza").click(function(){
     var name = $("#customerName").val()
+    console.log(name)
     var number = $("#customerNumber").val()
     var street = $("#street").val()
     var city = $("#city").val()
@@ -11,16 +12,15 @@ $(function(){
     var notes = $("#deliveryNotes").val()
     var newCustomer = new Customer(name, number, notes)
     var newAddress = new Address(type, street, city, state, zip)
-    newCustomer.addresses.push(newAddress);
-    addCustomerInfoToSummary(newCustomer)
-  })
-
-  $("#addPizza").click(function(){
     var size = $('#pizzaSize :selected').text();
     var cheese = $('#cheese :selected').text();
     var toppings = $("input.toppings:checked").map(function(){
       return $(this).val();}).get();
+    var newCustomer = new Customer(name, number, notes)
+    var newAddress = new Address(type, street, city, state, zip)
+    newCustomer.addresses.push(newAddress);
     var newPizza = new Pizza(size, cheese, toppings)
+    addCustomerInfoToSummary(newCustomer)
     addPizzaToSummary(newPizza);
 
   })

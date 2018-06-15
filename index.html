@@ -52,8 +52,7 @@
                    <option>School</option>
                    <option>Other</option>
                  </select>
-                </div>
-                <button type="button" class="btn btn-secondary" id="addAddress" name="address">Save Address to Order</button>
+               </div>
               </div>
               <div class="form-group col-sm-6">
                <label for="deliveryNotes">Any special instuctions for delivery?</label>
@@ -85,19 +84,19 @@
             <div class="row" id="topping">
               <div class="col-sm-4">
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="onion" id="onion" value="onion">
+                  <input class="form-check-input toppings" type="checkbox" name="onion" id="onion" value="Onion">
                   <label class="form-check-label" for="onion">
                     Onion
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="sausage" id="sausage" value="sausage">
+                  <input class="form-check-input toppings" type="checkbox" name="sausage" id="sausage" value="Sausage">
                   <label class="form-check-label" for="sausage">
                     Sausage
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="mushrooms" id="mushrooms" value="mushrooms">
+                  <input class="form-check-input toppings" type="checkbox" name="mushrooms" id="mushrooms" value="Mushrooms">
                   <label class="form-check-label" for="mushrooms">
                     Mushrooms
                   </label>
@@ -105,19 +104,19 @@
               </div>
               <div class="col-sm-4">
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="pineapple" id="pineapple" value="pineapple">
+                  <input class="form-check-input toppings" type="checkbox" name="pineapple" id="pineapple" value="Pineapple">
                   <label class="form-check-label" for="pineapple">
                     Pineapple
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="freshBasil" id="freshBasil" value="freshBasil">
+                  <input class="form-check-input toppings" type="checkbox" name="freshBasil" id="freshBasil" value="Fresh Basil">
                   <label class="form-check-label" for="freshBasil">
                     Fresh Basil
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="garlic" id="garlic" value="garlic">
+                  <input class="form-check-input toppings" type="checkbox" name="garlic" id="garlic" value="Garlic">
                   <label class="form-check-label" for="garlic">
                     Garlic
                   </label>
@@ -125,19 +124,19 @@
               </div>
               <div class="col-sm-4">
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="greenPeppers" id="greenPeppers" value="greenPeppers">
+                  <input class="form-check-input toppings" type="checkbox" name="greenPeppers" id="Green Peppers" value="Green Peppers">
                   <label class="form-check-label" for="greenPeppers">
                     Green Peppers
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input toppings" type="checkbox" name="blackOlives" id="blackOlives" value="blackOlives">
+                  <input class="form-check-input toppings" type="checkbox" name="blackOlives" id="blackOlives" value="Black Olives">
                   <label class="form-check-label" for="blackOlives">
                     Black Olives
                   </label>
                 </div>
                 <div class="form-check disabled">
-                  <input class="form-check-input toppings" type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
+                  <input class="form-check-input toppings" type="checkbox" name="pepperoni" id="pepperoni" value="Pepperoni">
                   <label class="form-check-label" for="pepperoni">
                     Pepperoni
                   </label>
@@ -165,11 +164,12 @@
           </div>
           <h4 class="pizzaOrders">Order</h4>
           <div class="pizzaOrders" id="orderPizza1">
-            <p>Pizza<br> <span class="orderSummaryInput" id="namePizza1"> </span></p>
-            <p>Size <br><span class="orderSummaryInput" id="sizePizza1"></span></p>
-            <p>Cheese <br><span class="orderSummaryInput" id="cheesePizza1"></span></p>
-            <p>Toppings <br><span class="orderSummaryInput" id="toppingsPizza1"></span></p>
-            <p>Cost <br><span class="orderSummaryInput" id="costPizza1"></span></p>
+            <p>Pizza<span class="pizzaSummaryInput" id="namePizza1"> </span>
+            <br>Size: <span class="pizzaSummaryInput" id="sizePizza1"></span>
+            <br>Cheese: <span class="pizzaSummaryInput" id="cheesePizza1"></span>
+            <br>Toppings: <br><span class="pizzaSummaryInput" id="toppingsPizza1"></span>
+            <br>Cost: <span class="pizzaSummaryInput" id="costPizza1"></span>
+            </p>
           </div>
           <button class="btn btn-success pizzaOrders" type="button" id="placeOrder">Place order</button>
         </div>
