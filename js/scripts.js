@@ -25,23 +25,27 @@ function Pizza(size, cheese, toppings){
   this.cheese = cheese;
   this.toppings = toppings;
 }
+
 var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
 var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
 var newPizza = new Pizza("medimum", "vegan", "mushroom");
 
 
 // calculate topping costs
-function calcToppingCost(numberOfToppings, pizzaSize){
+function calcPizzaCost(numberOfToppings, pizzaSize){
   var toppingCost
+  var basePrice
+  var pizzaCost
   if(pizzaSize === "small"){
     toppingCost = numberOfToppings * .50
-    return toppingCost
+    basePrice = 12
   } else if(pizzaSize ==="medium"){
     toppingCost = numberOfToppings * .75
-    return toppingCost
+    basePrice = 15
   } else {
     toppingCost = numberOfToppings * 1
-    return toppingCost
+    basePrice = 18
   }
-  console.log(toppingCost)
+  pizzaCost = toppingCost + basePrice
+  console.log(pizzaCost)
 }
