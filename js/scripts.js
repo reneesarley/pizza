@@ -20,19 +20,7 @@ function Address(type, street, city, state, zip) {
   Address.prototype.addAddress(this)
 }
 
-function Pizza(size, cheese, toppings){
-  this.size = size;
-  this.cheese = cheese;
-  this.toppings = toppings;
-}
-
-var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
-var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
-var newPizza = new Pizza("medimum", "vegan", "mushroom");
-
-
-// calculate topping costs
-function calcPizzaCost(numberOfToppings, pizzaSize){
+Pizza.prototype.calcPizzaCost = function (numberOfToppings, pizzaSize){
   var toppingCost
   var basePrice
   var pizzaCost
@@ -47,5 +35,16 @@ function calcPizzaCost(numberOfToppings, pizzaSize){
     basePrice = 18
   }
   pizzaCost = toppingCost + basePrice
-  console.log(pizzaCost)
+  return pizzaCost
 }
+
+function Pizza(size, cheese, toppings){
+  this.size = size;
+  this.cheese = cheese;
+  this.toppings = toppings;
+  this.pizzaCost = Pizza.prototype.calcPizzaCost(toppings.length, size)
+}
+
+var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
+var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
+var newPizza = new Pizza("medium", "vegan", ["mushroom"]);
