@@ -149,16 +149,28 @@
         </div>
         <div class="col-sm-3" id="orderSummary">
           <h4>Order Summary</h4>
-          <p>Customer<br> <span class="orderSummaryInput" id="orderName"> </span></p>
-          <p>Delivery address<br> <span class="orderSummaryInput" id="orderAddress"></span> <br> <span class="orderSummaryInput" id="orderCityStateZip"></span> </p>
-          <p>Contact number<br> <span class="orderSummaryInput" id="orderNumber"> </span></p>
-          <p>Delivery notes<br> <span class="orderSummaryInput" id="orderNotes"> </span></p>
-          <h4>Order</h4>
-          <p>Pizza 1<br> <span class="orderSummaryInput" id="orderPizza1"> </span></p>
-          <p>Size <br><span class="orderSummaryInput" id="sizePizza1"></span></p>
-          <p>Cheese <br><span class="orderSummaryInput" id="cheesePizza1"></span></p>
-          <p>Toppings <br><span class="orderSummaryInput" id="toppingsPizza1"></span></p>
-          <p>Cost <br><span class="orderSummaryInput" id="costPizza1"></span></p>
+          <div class="customerInfo">
+            <p><span class="orderSummaryInput" id="orderName"></span>
+            <br>
+            <span class="orderSummaryInput" id="orderAddress"></span>
+            <br>
+            <span class="orderSummaryInput" id="orderCityStateZip"></span>
+            <br>
+            <span class="orderSummaryInput" id="orderNumber"></span>
+            <br>
+            Delivery notes:
+            <br>
+            <span class="orderSummaryInput" id="orderNotes"></span>
+            </p>
+          </div>
+          <h4 class="pizzaOrders">Order</h4>
+          <div class="pizzaOrders" id="orderPizza1">
+            <p>Pizza 1<br> <span class="orderSummaryInput" id="namePizza1"> </span></p>
+            <p>Size <br><span class="orderSummaryInput" id="sizePizza1"></span></p>
+            <p>Cheese <br><span class="orderSummaryInput" id="cheesePizza1"></span></p>
+            <p>Toppings <br><span class="orderSummaryInput" id="toppingsPizza1"></span></p>
+            <p>Cost <br><span class="orderSummaryInput" id="costPizza1"></span></p>
+          </div>
         </div>
       </div>
     </div>

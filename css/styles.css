@@ -1,13 +1,9 @@
 body{
   background-color: lightgrey;
 }
-
-
 .container{
   padding-right: 0;
   margin-right: 0;
-}
-.row{
 }
 
 label{
@@ -31,4 +27,8 @@ input{
 
 .orderSummaryInput{
   font-weight: bold;
+}
+
+.pizzaOrders, .customerInfo {
+  display: none;
 }

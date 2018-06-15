@@ -27,6 +27,7 @@ $(function(){
   })
 
   function addCustomerInfoToSummary(customer){
+    $(".customerInfo").show();
     var cityStateZip = customer.addresses[0].city + ", " + customer.addresses[0].state + " " + customer.addresses[0].zip
     $("#orderName").text(customer.name);
     $("#orderNumber").text(customer.phone);
@@ -36,8 +37,10 @@ $(function(){
   }
 
   function addPizzaToSummary(pizza){
+    $(".pizzaOrders").show();
     $("#sizePizza1").text(pizza.size);
     $("#cheesePizza1").text(pizza.cheese);
+    $("#toppingsPizza1").text(pizza.toppings);
     $("#costPizza1").text("$" + pizza.pizzaCost);
 
   }
