@@ -13,6 +13,14 @@ _This application will take input from the customer and create their pizza order
 * _Clone from GitHub here: https://github.com/reneesarley/pizza_
 * _View in gh pages here:_
 
+## Specifications
+
+|Behavior  |     Input     | Output|
+|:----------:|:-------------:|:------:|
+| Customer selects a topping and the topping is added to the order for that pizza | mushroom | toppings: ["mushroom"]|
+| Customer selects a size and it is added to the pizza  | Medium | size: "medium" |
+| Customer selects type of cheese and it is added to the pizza | vegan cheese | cheese: "vegan"|
+| Customer selects multiple toppings and they are all added to the pizza | mushroom, basil, olives | toppings: ["mushroom", "basil", "olives"] |
 
 ## Known Bugs
 
