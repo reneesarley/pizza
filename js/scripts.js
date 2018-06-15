@@ -12,6 +12,8 @@ $(function(){
     var newCustomer = new Customer(name, number, notes)
     var newAddress = new Address(type, street, city, state, zip)
     newCustomer.addresses.push([newAddress]);
+    console.log("newContact: "+ newCustomer)
+    console.log("addresses:" + newCustomer.addresses);
     console.log(newCustomer.addresses[0].street);
     addCustomerInfoToSummary(newCustomer)
   })
@@ -19,7 +21,9 @@ $(function(){
   function addCustomerInfoToSummary(customer){
     var addressStreet = customer.addresses[0].street
     $("#orderName").text(customer.name);
-    $("#orderAddress").text(addressStreet);
+    $("#orderNumber").text(customer.number);
+    $("#orderAddress").text("test address");
+    $("#orderNotes").text("test notes");
     // $("#orderAddress").text(customer.addresses[0]);
   }
 

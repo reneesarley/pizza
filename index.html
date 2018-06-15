@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-sm-6">
                 <div class="form-group">
                  <label for="addressType">Address Type:</label>
                  <select class="form-control" id="addressType">
@@ -55,9 +55,93 @@
                 </div>
                 <button type="button" class="btn btn-secondary" id="addAddress" name="address">Save Address to Order</button>
               </div>
-              <div class="form-group col-sm-9">
+              <div class="form-group col-sm-6">
                <label for="deliveryNotes">Any special instuctions for delivery?</label>
                <textarea class="form-control" id="deliveryNotes" rows="3"></textarea>
+              </div>
+            </div>
+          </form>
+          <h4>Pizza 1</h4>
+          <form class="form-control-sm" id="pizzaOrder">
+            <div class="row" id="sizeCheese">
+              <div class="form-group col-sm-6">
+                <label for="pizzaSize">Select a size</label>
+                <select class="form-control" id="pizzaSize">
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="cheese">Select a cheese</label>
+                <select class="form-control" id="cheese">
+                  <option>Mozzerella</option>
+                  <option>Vegan</option>
+                  <option>No Cheese</option>
+                </select>
+              </div>
+            </div>
+            <p>Toppings:</p>
+            <div class="row" id="topping">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="onion" id="onion" value="onion">
+                  <label class="form-check-label" for="onion">
+                    Onion
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sausage" id="sausage" value="sausage">
+                  <label class="form-check-label" for="sausage">
+                    Sausage
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mushrooms" id="mushrooms" value="mushrooms">
+                  <label class="form-check-label" for="mushrooms">
+                    Mushrooms
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="pineapple" id="pineapple" value="pineapple">
+                  <label class="form-check-label" for="pineapple">
+                    Pineapple
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="freshBasil" id="freshBasil" value="freshBasil">
+                  <label class="form-check-label" for="freshBasil">
+                    Fresh Basil
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="garlic" id="garlic" value="garlic">
+                  <label class="form-check-label" for="garlic">
+                    Garlic
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="greenPeppers" id="greenPeppers" value="greenPeppers">
+                  <label class="form-check-label" for="greenPeppers">
+                    Green Peppers
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="blackOlives" id="blackOlives" value="blackOlives">
+                  <label class="form-check-label" for="blackOlives">
+                    Black Olives
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <input class="form-check-input" type="radio" name="pepperoni" id="pepperoni" value="pepperoni">
+                  <label class="form-check-label" for="pepperoni">
+                    Pepperoni
+                  </label>
+                </div>
               </div>
             </div>
           </form>
