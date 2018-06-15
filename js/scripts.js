@@ -1,20 +1,19 @@
 //user logic
 $(function(){
   $("#addAddress").click(function(){
-    console.log("button working");
     var name = $("#customerName").val()
+    var number = $("#customerNumber").val()
     var street = $("#street").val()
     var city = $("#city").val()
     var state = $("#state").val()
     var zip = $("#zip").val()
     var type = $("#addressType").val()
     var notes = $("#deliveryNotes").val()
-    console.log("street:" + street)
-    console.log("city:" + city)
-    console.log("state:" + state)
-    console.log("zip:" + zip)
-    console.log("addressType:" + type)
-    console.log("notes:" + notes)
+    console.log(name + number + notes)
+    var newCustomer = new Customer(name, number, notes)
+    var newAddress = new Address(type, street, city, state, zip)
+    newCustomer.addresses.push(newAddress);
+    console.log(newCustomer)
   })
 });
 
@@ -26,9 +25,9 @@ function Customer(name, phone, notes) {
   this.addresses = []
 }
 
-Address.prototype.addAddress = function(newAddress){
-  newCustomer.addresses.push(newAddress);
-}
+// Address.prototype.addAddress = function(newAddress){
+//   newCustomer.addresses.push(newAddress);
+// }
 
 function Address(type, street, city, state, zip) {
   this.type = type
@@ -36,7 +35,7 @@ function Address(type, street, city, state, zip) {
   this.city = city;
   this.state = state;
   this.zip = zip;
-  Address.prototype.addAddress(this)
+//   Address.prototype.addAddress(this)
 }
 
 Pizza.prototype.calcPizzaCost = function (numberOfToppings, pizzaSize){
@@ -64,6 +63,8 @@ function Pizza(size, cheese, toppings){
   this.pizzaCost = Pizza.prototype.calcPizzaCost(toppings.length, size)
 }
 
-var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
-var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
-var newPizza = new Pizza("medium", "vegan", ["mushroom"]);
+
+
+// var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
+// var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
+// var newPizza = new Pizza("medium", "vegan", ["mushroom"]);
