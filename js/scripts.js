@@ -12,10 +12,17 @@ $(function(){
     var newCustomer = new Customer(name, number, notes)
     var newAddress = new Address(type, street, city, state, zip)
     newCustomer.addresses.push(newAddress);
-    // console.log("newContact: "+ newCustomer)
-    // console.log("addresses:" + newCustomer.addresses);
-    // console.log(newCustomer.addresses[0].street);
     addCustomerInfoToSummary(newCustomer)
+  })
+
+  $("#addPizza").click(function(){
+    console.log("pizza button working")
+    var size = $('#pizzaSize :selected').text();
+    var cheese = $('#cheese :selected').text();
+    var numberOfToppings = $( ".toppings input:checked" ).length;
+    // var toppings = $('#toppings :selected').text();
+    console.log(numberOfToppings)
+
   })
 
   function addCustomerInfoToSummary(customer){
