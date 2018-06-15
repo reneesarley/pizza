@@ -19,9 +19,10 @@ $(function(){
     console.log("pizza button working")
     var size = $('#pizzaSize :selected').text();
     var cheese = $('#cheese :selected').text();
-    var numberOfToppings = $( ".toppings input:checked" ).length;
-    // var toppings = $('#toppings :selected').text();
-    console.log(numberOfToppings)
+    var toppings = $("input.toppings:checked").map(function(){
+      return $(this).val();
+      }).get();
+    console.log(toppings)
 
   })
 
