@@ -21,7 +21,6 @@ $(function(){
     var toppings = $("input.toppings:checked").map(function(){
       return $(this).val();}).get();
     var newPizza = new Pizza(size, cheese, toppings)
-    console.log(newPizza)
     addPizzaToSummary(newPizza);
 
   })
@@ -42,7 +41,6 @@ $(function(){
     $("#cheesePizza1").text(pizza.cheese);
     $("#toppingsPizza1").text(pizza.toppings);
     $("#costPizza1").text("$" + pizza.pizzaCost);
-
   }
 
 });
@@ -55,17 +53,12 @@ function Customer(name, phone, notes) {
   this.addresses = []
 }
 
-// Address.prototype.addAddress = function(newAddress){
-//   newCustomer.addresses.push(newAddress);
-// }
-
 function Address(type, street, city, state, zip) {
   this.type = type
   this.street = street;
   this.city = city;
   this.state = state;
   this.zip = zip;
-//   Address.prototype.addAddress(this)
 }
 
 Pizza.prototype.calcPizzaCost = function (numberOfToppings, pizzaSize){
@@ -93,8 +86,25 @@ function Pizza(size, cheese, toppings){
   this.pizzaCost = Pizza.prototype.calcPizzaCost(toppings.length, size)
 }
 
+function formatCosts(cost){
+  var formattedCost
+  if(Number.isInteger(cost)){
+    formattedCost = cost + ".00"
+  } else{
+    var index =  cost.toString().indexOf(".")
+    var length = cost.toString().length
+    if(length === (index + 2)){
+      console.log("in if")
+      formattedCost = cost + "0"
+    } else{
+      formattedCost = cost
+    }
+  }
+  console.log(index)
+  console.log("the cost length is" + length)
+  console.log(formattedCost)
+}
 
+function Order(){
 
-// var newCustomer = new Customer("Sam Jones", "503-888-1234", "Please call when you get here");
-// var newAddress = new Address ("home","1234 Alder St", "Portland", "OR", 97214);
-// var newPizza = new Pizza("medium", "vegan", ["mushroom"]);
+}
