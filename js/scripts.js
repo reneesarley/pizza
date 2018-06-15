@@ -1,7 +1,22 @@
 //user logic
 $(function(){
-
-})
+  $("#addAddress").click(function(){
+    console.log("button working");
+    var name = $("#customerName").val()
+    var street = $("#street").val()
+    var city = $("#city").val()
+    var state = $("#state").val()
+    var zip = $("#zip").val()
+    var type = $("#addressType").val()
+    var notes = $("#deliveryNotes").val()
+    console.log("street:" + street)
+    console.log("city:" + city)
+    console.log("state:" + state)
+    console.log("zip:" + zip)
+    console.log("addressType:" + type)
+    console.log("notes:" + notes)
+  })
+});
 
 //business logic
 function Customer(name, phone, notes) {
