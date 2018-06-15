@@ -16,13 +16,13 @@ $(function(){
   })
 
   $("#addPizza").click(function(){
-    console.log("pizza button working")
     var size = $('#pizzaSize :selected').text();
     var cheese = $('#cheese :selected').text();
     var toppings = $("input.toppings:checked").map(function(){
-      return $(this).val();
-      }).get();
-    console.log(toppings)
+      return $(this).val();}).get();
+    var newPizza = new Pizza(size, cheese, toppings)
+    console.log(newPizza)
+    addPizzaToSummary(newPizza);
 
   })
 
@@ -33,6 +33,13 @@ $(function(){
     $("#orderAddress").text(customer.addresses[0].street);
     $("#orderCityStateZip").text(cityStateZip);
     $("#orderNotes").text(customer.deliveryNotes);
+  }
+
+  function addPizzaToSummary(pizza){
+    $("#sizePizza1").text(pizza.size);
+    $("#cheesePizza1").text(pizza.cheese);
+    $("#costPizza1").text("$" + pizza.pizzaCost);
+
   }
 
 });
@@ -62,10 +69,10 @@ Pizza.prototype.calcPizzaCost = function (numberOfToppings, pizzaSize){
   var toppingCost
   var basePrice
   var pizzaCost
-  if(pizzaSize === "small"){
+  if(pizzaSize === "Small"){
     toppingCost = numberOfToppings * .50
     basePrice = 12
-  } else if(pizzaSize ==="medium"){
+  } else if(pizzaSize ==="Medium"){
     toppingCost = numberOfToppings * .75
     basePrice = 15
   } else {
