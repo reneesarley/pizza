@@ -29,7 +29,6 @@ _This application will take input from the customer and create their pizza order
 | Add Customer's address to Address object | 1234 Alder St, Portland OR 97214 | street: "1234 Alder St", city: "Portland", state: "OR", zip: 97214 |
 | Charge customer 50 cents per topping for small pizzas | mushrooms, olives, basil  | $1.50  |
 | Charge customer 75 cents per topping for medium pizzas | mushrooms, olives, basil  | $2.25  |
-| Charge customer 50 cents per topping for small pizzas | mushrooms, olives, basil  | $1.50  |
 | Charge customer $1 per topping for large pizzas | mushrooms, olives, basil  | $3  |
 
 ## Known Bugs
