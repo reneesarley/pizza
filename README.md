@@ -25,6 +25,8 @@ _This application will take input from the customer and create their pizza order
 | Customer selects a size and it is added to the pizza  | Medium | size: "medium" |
 | Customer selects type of cheese and it is added to the pizza | vegan cheese | cheese: "vegan"|
 | Customer selects multiple toppings and they are all added to the pizza | mushroom, basil, olives | toppings: ["mushroom", "basil", "olives"] |
+| Add Customer's Name, phone and special instructions to customer object | Sam Jones, 503.888.1234, "Please call when you arrive" | name: "Same Jones", phone: "503.888.1234", deliveryNotes: "Please call when you arrive" |
+| Add Customer's address to Address object | 1234 Alder St, Portland OR 97214 | street: "1234 Alder St", city: "Portland", state: "OR", zip: 97214 |
 
 ## Known Bugs
 
