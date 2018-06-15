@@ -32,3 +32,7 @@ input{
 .pizzaOrders, .customerInfo {
   display: none;
 }
+
+.orderSummaryInput{
+  line-height: 1em;
+}

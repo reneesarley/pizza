@@ -25,6 +25,12 @@ $(function(){
 
   })
 
+  $("#placeOrder").click(function(){
+    alert("Thanks for the order!");
+    location.reload();
+
+  });
+
   function addCustomerInfoToSummary(customer){
     $(".customerInfo").show();
     var cityStateZip = customer.addresses[0].city + ", " + customer.addresses[0].state + " " + customer.addresses[0].zip
@@ -36,11 +42,12 @@ $(function(){
   }
 
   function addPizzaToSummary(pizza){
+    var cost = formatCosts(pizza.pizzaCost)
     $(".pizzaOrders").show();
     $("#sizePizza1").text(pizza.size);
     $("#cheesePizza1").text(pizza.cheese);
     $("#toppingsPizza1").text(pizza.toppings);
-    $("#costPizza1").text("$" + pizza.pizzaCost);
+    $("#costPizza1").text("$" + cost);
   }
 
 });
@@ -100,11 +107,5 @@ function formatCosts(cost){
       formattedCost = cost
     }
   }
-  console.log(index)
-  console.log("the cost length is" + length)
-  console.log(formattedCost)
-}
-
-function Order(){
-
+  return formattedCost
 }
